@@ -38,7 +38,9 @@ netstat -n |perl -anle '$S{$F[5]}+=1 if /^tcp/; END{while( ($k,$v) = each %S){pr
 ### 小tips
 
 perl -a 可以直接分割空格，而且连续空格当做一个空格，不像cut是死板地每个空格一个位置
-在perl里 ``$a =~ /#regex#/``  里面填上括号分组，即可用$1, $2来获得匹配内容
+
+在perl里 ``$a =~ /#regex(group)#/ print $1``  里面填上括号分组，即可用$1, $2来获得匹配内容，
+匹配即提取
 
 
 ### 参考
